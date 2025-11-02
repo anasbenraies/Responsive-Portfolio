@@ -1,0 +1,15 @@
+.matrix-canvas-container {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1 !important;
+    background: #000 !important;
+    overflow: hidden !important;
+}
+
+.matrix-canvas-container canvas {
+    all: unset;
+    display: block;
+}

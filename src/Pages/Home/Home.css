@@ -1,0 +1,22 @@
+.main {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    position: absolute;
+    top: calc(50% + 50px);
+    /* was 100px — moved closer to text */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}

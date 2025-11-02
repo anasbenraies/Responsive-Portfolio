@@ -1,0 +1,173 @@
+.profile-page {
+    background-color: #1e1d1dff;
+    color: white;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.profile-title {
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #ccff33;
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+
+/* === Main content layout === */
+
+.profile-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    gap: 2rem;
+    flex-wrap: wrap;
+    /* fallback for smaller widths */
+}
+
+
+/* Left: VCard */
+
+.profile-card {
+    flex: 1 1 280px;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+
+/* Right: HCards grid */
+
+.hcards-grid {
+    flex: 2 1 500px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    justify-items: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+
+/* Uniform sizing */
+
+.hcards-grid>*,
+.profile-card>* {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+/* ============================= */
+
+
+/* 📱 Responsive Layout Rules    */
+
+
+/* ============================= */
+
+
+/* Stack vertically only when truly mobile (<768px) */
+
+@media (max-width: 767px) {
+    .profile-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .profile-card {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+    .hcards-grid {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+}
+
+
+/* 💻 Between 768px–1200px (tablets, small laptops) */
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    .profile-content {
+        flex-wrap: nowrap;
+    }
+    .profile-card {
+        flex: 1 1 30%;
+    }
+    .hcards-grid {
+        flex: 2 1 70%;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+}
+
+
+/* === AboutMe Section === */
+
+.AboutMe {
+    width: 100%;
+    max-width: 900px;
+    margin-top: 6rem;
+    background-color: #2a2a2aff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.AboutMe:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
+}
+
+.AboutMe h2 {
+    color: #ccff33;
+    margin-bottom: 1.5rem;
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+}
+
+
+/* Ensure the Accordion inside adjusts fluidly */
+
+.AboutMe .ui.accordion,
+.AboutMe .accordion {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+/* === Responsive Rules for AboutMe === */
+
+
+/* 📱 Mobile (<768px): full width and smaller padding */
+
+@media (max-width: 767px) {
+    .AboutMe {
+        padding: 1rem;
+        margin-top: 2rem;
+        width: 100%;
+        border-radius: 8px;
+    }
+    .AboutMe h2 {
+        font-size: 1.4rem;
+    }
+}
+
+
+/* 💻 Medium (768px–1200px): centered and flexible width */
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    .AboutMe {
+        max-width: 800px;
+        margin-top: 3rem;
+        padding: 1.5rem 2rem;
+    }
+}
