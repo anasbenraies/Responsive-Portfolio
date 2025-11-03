@@ -1,0 +1,194 @@
+.boxDisplay {
+    background-color: #232323;
+    border-radius: 15px;
+    color: white;
+    text-align: left;
+    padding: 2rem;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+    width: 90%;
+    max-width: 900px;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    box-sizing: border-box;
+}
+
+
+/* Project Title */
+
+.projectTitle {
+    text-align: center;
+    font-size: 2rem;
+    color: #ffae42;
+    margin-bottom: 1rem;
+}
+
+
+/* Section Titles */
+
+.sectionTitle {
+    color: #ffa500;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+
+/* Text Content */
+
+.sectionContent {
+    color: #eaeaea;
+    font-size: 1rem;
+    line-height: 1.6;
+    word-wrap: break-word;
+}
+
+
+/* GitHub Link */
+
+.repoLink {
+    color: #6ab7ff;
+    text-decoration: none;
+    word-break: break-all;
+    font-weight: bold;
+}
+
+.repoLink:hover {
+    text-decoration: underline;
+}
+
+
+/* Feedback Section */
+
+.feedbackSection {
+    border-top: 1px solid #444;
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+
+/* Feedback Form */
+
+.feedbackForm {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.feedbackInput {
+    flex: 1;
+    min-width: 200px;
+    padding: 0.8rem 1rem;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    font-size: 1rem;
+    background-color: #333;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.feedbackInput:focus {
+    background-color: #3d3d3d;
+    box-shadow: 0 0 8px #ffa500;
+}
+
+.feedbackButton {
+    padding: 0.8rem 1.4rem;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #ffa500, #ff6600);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.feedbackButton:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #ffb733, #ff751a);
+}
+
+.feedbackSuccess {
+    color: #7fff7f;
+    font-size: 0.95rem;
+    margin-top: 0.3rem;
+    text-align: center;
+}
+
+
+/* Responsive Layouts */
+
+
+/* Desktop - Push feedback form a little lower */
+
+@media (min-width: 1025px) {
+    .feedbackSection {
+        margin-top: 3rem;
+        /* 👈 Add vertical spacing only on large screens */
+    }
+}
+
+
+/* Tablet */
+
+@media (max-width: 1024px) {
+    .boxDisplay {
+        width: 95%;
+        padding: 1.5rem;
+    }
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+    .boxDisplay {
+        width: 95%;
+        padding: 1rem;
+    }
+    .projectTitle {
+        font-size: 1.6rem;
+    }
+    .sectionTitle {
+        font-size: 1.1rem;
+    }
+    .sectionContent {
+        font-size: 0.95rem;
+    }
+    .feedbackForm {
+        flex-direction: column;
+    }
+    .feedbackButton {
+        width: 100%;
+    }
+}
+
+
+/* Small Phones */
+
+@media (max-width: 480px) {
+    .boxDisplay {
+        padding: 0.8rem;
+        border-radius: 10px;
+    }
+    .projectTitle {
+        font-size: 1.4rem;
+    }
+    .sectionTitle {
+        font-size: 1rem;
+    }
+    .sectionContent {
+        font-size: 0.9rem;
+    }
+    .feedbackInput {
+        font-size: 0.9rem;
+    }
+    .feedbackButton {
+        padding: 0.7rem;
+    }
+}

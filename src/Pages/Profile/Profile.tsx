@@ -3,6 +3,8 @@ import HCard from "../../Components/Cards/Hcard";
 import VCard from "../../Components/Cards/Vcard";
 import "./Profile.css";
 import AccordionExampleInverted from "../../Components/AccordionQ";
+import { Fade } from "react-reveal";
+import { Link } from "react-router-dom";
 
 type Props = {
   name: string;
@@ -26,11 +28,13 @@ const Profile: React.FC<Props> = ({ name }) => {
 
         {/* Right side */}
         <div className="hcards-grid">
-          <HCard
-            header="Projects"
-            meta="Many"
-            description="Lorem ipsum testing this paragraph to see how it looks."
-          />
+          <Link to={"/projects"}>
+            <HCard
+              header="Projects"
+              meta="Many"
+              description="Lorem ipsum testing this paragraph to see how it looks."
+            />
+          </Link>
           <HCard
             header="Experience"
             meta="Available"
@@ -44,10 +48,12 @@ const Profile: React.FC<Props> = ({ name }) => {
         </div>
       </div>
       <br />
-      <div className="AboutMe">
-        <h2>Some questions </h2>
-        <AccordionExampleInverted />
-      </div>
+      <Fade>
+        <div className="AboutMe">
+          <h2>Some questions </h2>
+          <AccordionExampleInverted />
+        </div>
+      </Fade>
     </div>
   );
 };
