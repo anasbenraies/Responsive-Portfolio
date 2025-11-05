@@ -6,8 +6,9 @@ import { Link, Links } from "react-router-dom";
 
 const Home: React.FC = () => {
   return (
-    <div >
+    <div>
       <MatrixAnimation timeout={70} />
+      <div className="overlay"></div>
       <div className="main">
         <h2 style={{ color: "#ccff33" }}>Hello !</h2>
         <p style={{ color: "#d9fb00ff" }}>

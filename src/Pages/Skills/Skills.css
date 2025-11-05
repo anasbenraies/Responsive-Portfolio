@@ -1,0 +1,88 @@
+.skills-page {
+    background-color: #1e1d1d;
+    color: white;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 2rem;
+    box-sizing: border-box;
+}
+
+.skills-title {
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    color: #ccff33;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(204, 255, 51, 0.4);
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    justify-items: center;
+}
+
+.skills-section {
+    background-color: #2a2a2a;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 380px;
+}
+
+.skills-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(204, 255, 51, 0.3);
+}
+
+.skills-subtitle {
+    text-align: center;
+    color: #ffcc33;
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    border-bottom: 2px solid #ffcc33;
+    padding-bottom: 0.5rem;
+}
+
+
+/* 📱 Responsive Tweaks */
+
+@media (max-width: 1024px) {
+    .skills-container {
+        gap: 1.5rem;
+    }
+    .skills-subtitle {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .skills-title {
+        font-size: 1.8rem;
+    }
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+    .skills-section {
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-title {
+        font-size: 1.5rem;
+    }
+    .skills-section {
+        padding: 1rem;
+    }
+    .skills-subtitle {
+        font-size: 1.1rem;
+    }
+}

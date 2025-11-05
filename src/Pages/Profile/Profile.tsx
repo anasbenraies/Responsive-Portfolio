@@ -40,9 +40,17 @@ const Profile: React.FC<Props> = ({ name }) => {
             meta="Available"
             description="Lorem ipsum testing this paragraph to see how it looks."
           />
+          <Link to={"/skills"}>
+            <HCard
+              header="Skills"
+              meta="Variety"
+              description="Lorem ipsum testing this paragraph to see how it looks."
+            />
+          </Link>
+
           <HCard
-            header="Skills"
-            meta="Variety"
+            header="Certifications and Awards"
+            meta="Available"
             description="Lorem ipsum testing this paragraph to see how it looks."
           />
         </div>
