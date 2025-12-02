@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import type { FC } from "react";
 import { Fade } from "react-reveal";
 import { Card, Icon, Image } from "semantic-ui-react";
 
@@ -14,7 +14,7 @@ const VCard: FC<HCardProps> = ({ name, job, description }) => {
     <Fade>
       <Card>
         <Image
-          src="https://react.semantic-ui.com/images/avatar/large/matthew.png"
+          src="/anas.jpg"
           wrapped
           ui={false}
         />
@@ -32,12 +32,13 @@ const VCard: FC<HCardProps> = ({ name, job, description }) => {
         <Card.Content extra>
           <div>
             <Icon name="user" />
-            Welcome again to my website
+            Building innovative apps powered by AI
           </div>
         </Card.Content>
       </Card>
     </Fade>
 
-);}
+  );
+}
 
 export default VCard

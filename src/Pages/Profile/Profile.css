@@ -1,3 +1,22 @@
+.stylish-shadow {
+  padding: 1rem 1rem;
+  background-color: #222; /* dark background */
+  color: #fff;
+  border-radius: 12px;
+  transition: box-shadow 0.3s, transform 0.3s;
+  box-shadow: 0 4px 15px rgba(128, 128, 128, 0.7); /* gray shadow */
+  display: inline-block; /* ensures it wraps only the card */
+  padding: 10; /* remove extra offsets */
+}
+
+.stylish-shadow:hover {
+  transform: translateY(-3px); /* subtle lift */
+  box-shadow: 0 8px 25px rgba(255, 255, 0, 0.9); /* glowing yellow on hover */
+}
+
+.questions{
+    margin-left: 1em;
+}
 .profile-page {
     background-color: #1e1d1dff;
     color: white;

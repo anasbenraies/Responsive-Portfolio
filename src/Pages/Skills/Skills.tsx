@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import type { FC } from "react";
 import { SkillsTable as TableX } from "../../Components/SkillsTable";
 import "./Skills.css";
 
@@ -10,15 +10,18 @@ const Skills: FC<SkillsProps> = () => {
       <h2 className="skills-title">My Skills</h2>
       <div className="skills-container">
         <div className="skills-section">
-          <h3 className="skills-subtitle">Hard Skills</h3>
+          <h3 className="skills-subtitle">Frameworks and Libraries</h3>
           <TableX
             Color="orange"
             headers={["Skill", "Level"]}
             body={[
-              ["JavaScript", "Expert"],
-              ["React", "Intermediate"],
-              ["Node.js", "Intermediate"],
-              ["TypeScript", "Intermediate"],
+              ["React", "Advanced/Expert"],
+              ["NodeJs", "Advanced/Expert"],
+              ["Springboot", "Advanced/Expert"],
+              ["ExpressJs", "Advanced/Expert"],
+              ["Hono.Js", "Advanced/Expert"],
+              ["Python", "Not a library 😉 , still enjoy it"],
+              
             ]}
           />
         </div>

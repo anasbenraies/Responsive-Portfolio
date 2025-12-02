@@ -55,3 +55,24 @@
     transform: scale(1.05);
     box-shadow: 0 0 15px #00ff00;
 }
+
+/* Pill button style */
+.pill-btn {
+  border-radius: 50px !important; /* pill shape */
+  padding: 0.8rem 2rem !important;
+  font-weight: bold !important;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+
+  /* glow using current color */
+  box-shadow: 0 0 10px currentColor;
+  transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
+}
+
+.pill-btn:hover {
+  transform: scale(1.08);
+  /* glow stronger on hover */
+  box-shadow: 0 0 18px currentColor;
+  /* lighten the button color */
+  filter: brightness(1.2);
+}

@@ -1,6 +1,6 @@
-import React, { FC } from "react";
+import type { FC } from "react";
 import "./CardProj.css";
-import { Label } from "semantic-ui-react";
+import { Label, type SemanticCOLORS } from "semantic-ui-react";
 import { Slide } from "react-reveal";
 
 interface CardProjProps {
@@ -10,7 +10,7 @@ interface CardProjProps {
 }
 
 const CardProj: FC<CardProjProps> = ({ title, ProjectType, TagArrays }) => {
-  const randomColors = [
+  const randomColors :SemanticCOLORS[] = [
     "red",
     "green",
     "blue",
