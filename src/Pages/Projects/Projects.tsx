@@ -14,12 +14,12 @@ const Projects: React.FC = () => {
       <Grid stackable columns={2} divided className="projects-grid">
         <Grid.Row stretched>
           {/* Left side - Display */}
-          <Grid.Column className="display-section">
+          <Grid.Column width={8} className="display-section">
             <DisplayCard ProjectTitle={ProjectName} />
           </Grid.Column>
 
           {/* Right side - List of Projects */}
-          <Grid.Column className="projects-list">
+          <Grid.Column width={8} className="projects-list">
             <div onClick={() => setProjectName("Crypto Bot")}>
               <CardProj
                 title="Crypto Bot"

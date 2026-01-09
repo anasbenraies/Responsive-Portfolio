@@ -11,52 +11,118 @@
 
 .projects-grid {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .display-section {
     display: flex !important;
     justify-content: center;
     align-items: center;
-    padding: 1rem !important;
+    padding: 1.5rem !important;
+    min-height: 400px;
 }
 
 .projects-list {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
-    padding: 1rem !important;
+    padding: 1.5rem !important;
 }
 
+.projects-list > div {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
 
-/* 💻 Medium screens (tablets) */
+.projects-list > div:hover {
+    transform: translateX(5px);
+}
 
+/* 💻 Large screens (desktops) */
+@media (min-width: 1200px) {
+    .projects-page {
+        padding: 3rem;
+    }
+    .display-section {
+        min-height: 500px;
+    }
+}
+
+/* 📱 Tablets (landscape and portrait) */
 @media (max-width: 992px) {
     .projects-page {
         padding: 1.5rem;
     }
+    
+    .display-section {
+        min-height: 350px;
+        padding: 1.2rem !important;
+    }
+    
     .projects-list {
         gap: 1rem;
+        padding: 1.2rem !important;
     }
 }
 
-
-/* 📱 Small screens (phones) */
-
+/* 📱 Tablets (portrait) and large phones */
 @media (max-width: 768px) {
     .projects-page {
         padding: 1rem;
+        align-items: center;
     }
+    
     .projects-grid {
         display: flex;
         flex-direction: column;
-        align-items: center;
-    }
-    .display-section,
-    .projects-list {
         width: 100%;
     }
+    
+    .display-section {
+        width: 100% !important;
+        min-height: 300px;
+        padding: 1rem !important;
+        margin-bottom: 1rem;
+    }
+    
     .projects-list {
-        margin-top: 1.5rem;
+        width: 100% !important;
+        padding: 1rem !important;
+        gap: 0.8rem;
+    }
+}
+
+/* 📱 Small phones */
+@media (max-width: 576px) {
+    .projects-page {
+        padding: 0.75rem;
+    }
+    
+    .display-section {
+        min-height: 250px;
+        padding: 0.8rem !important;
+    }
+    
+    .projects-list {
+        padding: 0.8rem !important;
+        gap: 0.6rem;
+    }
+}
+
+/* 📱 Very small screens */
+@media (max-width: 400px) {
+    .projects-page {
+        padding: 0.5rem;
+    }
+    
+    .display-section {
+        min-height: 200px;
+        padding: 0.5rem !important;
+    }
+    
+    .projects-list {
+        padding: 0.5rem !important;
+        gap: 0.5rem;
     }
 }

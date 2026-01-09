@@ -42,7 +42,7 @@ export default class AccordionExampleInverted extends Component<{}, State> {
                         </Accordion.Title>
                         <Accordion.Content active={activeIndex === 0}>
                             <p>
-                                I’m a Tunisian Full Stack Engineer passionate about building scalable web applications and integrating AI-driven solutions. I thrive on solving complex problems and turning ideas into functi
+                                I’m a Tunisian Full Stack Engineer passionate about building scalable web applications and integrating AI-driven solutions. I thrive on solving complex problems and turning ideas into functional 
                             </p>
                         </Accordion.Content>
 
