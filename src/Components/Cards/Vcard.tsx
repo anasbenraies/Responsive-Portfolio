@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import { Fade } from "react-reveal";
+//import { Fade } from "react-reveal";
 import { Card, Icon, Image } from "semantic-ui-react";
 
 interface HCardProps {
@@ -11,7 +11,7 @@ interface HCardProps {
 const VCard: FC<HCardProps> = ({ name, job, description }) => {
   const contrast = { color: "black" };
   return (
-    <Fade>
+    //<Fade>
       <Card>
         <Image
           src="/anas.jpg"
@@ -36,7 +36,7 @@ const VCard: FC<HCardProps> = ({ name, job, description }) => {
           </div>
         </Card.Content>
       </Card>
-    </Fade>
+    //</Fade>
 
   );
 }

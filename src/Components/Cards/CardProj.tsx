@@ -1,7 +1,7 @@
 import type { FC } from "react";
 import "./CardProj.css";
 import { Label, type SemanticCOLORS } from "semantic-ui-react";
-import { Slide } from "react-reveal";
+//import { Slide } from "react-reveal";
 
 interface CardProjProps {
   title: string;
@@ -16,7 +16,7 @@ const CardProj: FC<CardProjProps> = ({ title, ProjectType, TagArrays }) => {
     "blue",
   ];
   return (
-    <Slide right>
+    //<Slide right>
       <div className="box">
         <Label
           as="a"
@@ -41,7 +41,7 @@ const CardProj: FC<CardProjProps> = ({ title, ProjectType, TagArrays }) => {
           ))}
         </div>
       </div>
-    </Slide>
+    //</Slide>
   );
 };
 

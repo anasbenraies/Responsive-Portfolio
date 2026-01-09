@@ -1,5 +1,5 @@
 import React from "react";
-import { Slide } from "react-reveal";
+//import { Slide } from "react-reveal";
 import { Table, type SemanticCOLORS } from "semantic-ui-react";
 
 interface TableXProps {
@@ -11,7 +11,7 @@ interface TableXProps {
 export const SkillsTable: React.FC<TableXProps> = ({ Color, headers, body }) => {
   //body table of tables
   return (
-    <Slide top>
+    //<Slide top>
       <div>
         <Table color={Color} key={Color} inverted>
           <Table.Header>
@@ -33,7 +33,7 @@ export const SkillsTable: React.FC<TableXProps> = ({ Color, headers, body }) => 
           </Table.Body>
         </Table>
       </div>
-    </Slide>
+    //</Slide>
   );
 };
 

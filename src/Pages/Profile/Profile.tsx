@@ -3,7 +3,7 @@ import HCard from "../../Components/Cards/Hcard";
 import VCard from "../../Components/Cards/Vcard";
 import "./Profile.css";
 import AccordionExampleInverted from "../../Components/AccordionQ";
-import { Fade } from "react-reveal";
+//import { Fade } from "react-reveal";
 import { Link } from "react-router-dom";
 
 type Props = {
@@ -70,12 +70,12 @@ const Profile: React.FC<Props> = ({ name }) => {
         </div>
       </div>
       <br />
-      <Fade>
+      {/* <Fade> */}
         <div className="AboutMe">
           <h2 className="questions">Some questions </h2>
           <AccordionExampleInverted />
         </div>
-      </Fade>
+      {/* </Fade> */}
     </div>
   );
 };

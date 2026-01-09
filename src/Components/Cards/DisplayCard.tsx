@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Slide } from "react-reveal";
+//import { Slide } from "react-reveal";
 import "./DisplayCard.css";
 
 interface DisplayProps {
@@ -44,7 +44,7 @@ const DisplayCard: React.FC<DisplayProps> = ({ ProjectTitle }) => {
   };
 
   return (
-    <Slide left>
+    //<Slide left>
       <div className="boxDisplay">
         <h3 className="projectTitle">{ProjectTitle}</h3>
 
@@ -91,7 +91,7 @@ const DisplayCard: React.FC<DisplayProps> = ({ ProjectTitle }) => {
           )}
         </div>
       </div>
-    </Slide>
+    //</Slide>
   );
 };
 

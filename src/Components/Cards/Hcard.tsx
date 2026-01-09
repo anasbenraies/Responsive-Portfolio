@@ -1,6 +1,6 @@
 import React from "react";
 import { Card } from "semantic-ui-react";
-import { Fade } from "react-reveal";
+//import { Fade } from "react-reveal";
 
 type HCardProps = {
   header: string;
@@ -16,7 +16,7 @@ const HCard: React.FC<HCardProps> = ({ header, meta, description }) => {
   ) : null;
 
   return (
-    <Fade>
+    //<Fade>
       <div>
         <Card
           color="yellow"
@@ -31,7 +31,7 @@ const HCard: React.FC<HCardProps> = ({ header, meta, description }) => {
           }}
         />
       </div>
-    </Fade>
+    //</Fade>
   );
 };
 
