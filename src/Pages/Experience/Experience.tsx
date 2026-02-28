@@ -6,7 +6,7 @@ type Props = {}
 const Experience: React.FC<Props> = () => {
 
     const [percent, setPercent] = React.useState(0)
-    const [data, setData] = React.useState([
+    const data =[
         {
             BarProgress: 20,
             Poste: "Customer Support Advisor — Teleperformance (2021)",
@@ -32,7 +32,7 @@ const Experience: React.FC<Props> = () => {
             Poste: "Open to New Opportunities — 2026",
             Description: "Actively seeking a full-time Software Engineering role to contribute, grow, and build impactful products."
         }
-    ])
+    ]
 
 
     const incrementProgress = () => {
