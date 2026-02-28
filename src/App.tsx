@@ -5,6 +5,7 @@ import Home from './Pages/Home/Home';
 import Profile from './Pages/Profile/Profile';
 import Projects from './Pages/Projects/Projects';
 import Skills from './Pages/Skills/Skills';
+import Experience from './Pages/Experience/Experience';
 
 const App = () => (
   <BrowserRouter>
@@ -13,6 +14,7 @@ const App = () => (
       <Route path="/hack" element={<Profile name="Anas Ben Raies" />} />
       <Route path="/projects" element={<Projects />} />
       <Route path="/skills" element={<Skills />} />
+      <Route path="/Experience" element={<Experience />} />
     </Routes>
   </BrowserRouter>
 );

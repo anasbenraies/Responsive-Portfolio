@@ -12,7 +12,6 @@ interface CardProjProps {
 const CardProj: FC<CardProjProps> = ({ title, ProjectType, TagArrays }) => {
   const randomColors :SemanticCOLORS[] = [
     "red",
-    "green",
     "blue",
   ];
   return (

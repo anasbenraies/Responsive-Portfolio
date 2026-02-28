@@ -1,12 +1,14 @@
+/* ✏️ Change 1: was inline-block, causes width shrink */
 .stylish-shadow {
-  padding: 1rem 1rem;
-  background-color: #222; /* dark background */
+  padding: 1rem;
+  background-color: #222;
   color: #fff;
   border-radius: 12px;
   transition: box-shadow 0.3s, transform 0.3s;
-  box-shadow: 0 4px 15px rgba(128, 128, 128, 0.7); /* gray shadow */
-  display: inline-block; /* ensures it wraps only the card */
-  padding: 10; /* remove extra offsets */
+  box-shadow: 0 4px 15px rgba(128, 128, 128, 0.7);
+  display: block;   /* ✏️ was inline-block */
+  width: 100%;      /* ✏️ added */
+  box-sizing: border-box;  /* ✏️ added */
 }
 
 .stylish-shadow:hover {
@@ -71,6 +73,13 @@
     justify-items: center;
     text-align: center;
     box-sizing: border-box;
+}
+
+/* ✏️ Change 2: Link tag shrinks its child by default, force full width */
+.hcards-grid > a {
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
 }
 
 

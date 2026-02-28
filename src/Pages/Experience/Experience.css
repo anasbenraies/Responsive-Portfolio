@@ -1,0 +1,49 @@
+.full-page-container {
+    background-color: #1e1d1dff;
+    min-height: 100vh;
+    min-width: 100vw;
+    box-sizing: border-box;
+}
+
+.centered-container {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 1rem;
+  
+}
+
+
+.MatrixAnimation {
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+
+.progress-wrapper {
+  display: flex;
+  flex-direction: column;   /* stack vertically */
+  align-items: flex-start;  /* both start from the left */
+  gap: 1rem;
+  width: 60%;
+}
+
+.progress-wrapper .ui.progress {
+  width: 100%;  /* progress fills the wrapper */
+  margin: 0;    /* remove Semantic UI default margin */
+}
+.progress-label {
+  width: 100%;
+  text-align: center;  /* centered above the bar */
+  margin: 0;
+  color: white;
+}

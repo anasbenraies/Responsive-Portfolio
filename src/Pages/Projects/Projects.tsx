@@ -20,25 +20,25 @@ const Projects: React.FC = () => {
 
           {/* Right side - List of Projects */}
           <Grid.Column width={8} className="projects-list">
-            <div onClick={() => setProjectName("Crypto Bot")}>
+            <div onClick={() => setProjectName("Software Module Generator")}>
               <CardProj
-                title="Crypto Bot"
-                ProjectType="Chrome Extension"
-                TagArrays={["Python", "Binance", "Chrome Extension"]}
+                title="Software Module Generator"
+                ProjectType="AI Powered Software"
+                TagArrays={["Automation", "AI", "FullStack"]}
               />
             </div>
-            <div onClick={() => setProjectName("Authentication API")}>
+            <div onClick={() => setProjectName("Imonitor Backend")}>
               <CardProj
-                title="Authentication API"
+                title="Imonitor Backend"
                 ProjectType="Backend"
-                TagArrays={["Authentication", "JWT", "APIs", "Node.js"]}
+                TagArrays={["IoT", "Spring Boot", "MQTT Broker"]}
               />
             </div>
-            <div onClick={() => setProjectName("Messaging App")}>
+            <div onClick={() => setProjectName("This Portfolio")}>
               <CardProj
-                title="Messaging App"
-                ProjectType="Full Stack"
-                TagArrays={["React", "Node.js", "Socket.io", "JWT"]}
+                title="This Portfolio"
+                ProjectType="FrontEnd"
+                TagArrays={["React", "Css","Responsiveness"]}
               />
             </div>
           </Grid.Column>
