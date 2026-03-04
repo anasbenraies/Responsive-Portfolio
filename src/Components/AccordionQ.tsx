@@ -1,5 +1,5 @@
 import { Component } from 'react'
-import { Accordion, Icon, Segment, type AccordionTitleProps, } from 'semantic-ui-react'
+import { Accordion, Icon, Segment, Button, type AccordionTitleProps, } from 'semantic-ui-react'
 import "./AccordionQ.css"
 
 type State = {
@@ -42,7 +42,7 @@ export default class AccordionExampleInverted extends Component<{}, State> {
                         </Accordion.Title>
                         <Accordion.Content active={activeIndex === 0}>
                             <p>
-                                I’m a Tunisian Full Stack Engineer passionate about building scalable web applications and integrating AI-driven solutions. I thrive on solving complex problems and turning ideas into functional 
+                                I’m a Tunisian Full Stack Engineer passionate about building scalable web applications and integrating AI-driven solutions. I thrive on solving complex problems and turning ideas into functional realities. 
                             </p>
                         </Accordion.Content>
 
@@ -56,7 +56,7 @@ export default class AccordionExampleInverted extends Component<{}, State> {
                         </Accordion.Title>
                         <Accordion.Content active={activeIndex === 1}>
                             <p>
-                                I focus on writing clean, maintainable code while designing systems that deliver real user impact. I combine backend efficiency, modern frontend experiences, and AI-enhanced features to create solutions that are robust, innovative, and future-proof.
+                                I write maintainable, well-tested TypeScript and React , even Java 😉, code and design systems that deliver measurable user value. I break problems into small, testable components and prioritize performance optimization 
                             </p>
                         </Accordion.Content>
 
@@ -66,12 +66,21 @@ export default class AccordionExampleInverted extends Component<{}, State> {
                             onClick={this.handleClick}
                         >
                             <Icon name='dropdown' />
-                            How do I solve problems?
+                            Have a look at my Cv 
                         </Accordion.Title>
                         <Accordion.Content active={activeIndex === 2}>
-                            <p>
-                               I approach problems analytically: breaking them into smaller tasks, prototyping solutions, and iterating based on data and feedback. I embrace new technologies and tools that improve efficiency and quality, ensuring my solutions are both effective and sustainable.
-                            </p>
+                            <div style={{ marginTop: 12 }}>
+                                {/* The CV is placed in the public folder as /cv-AnasBenRaies-fr.pdf */}
+                                <Button
+                                    color='red'
+                                    as="a"
+                                    href="/cv-AnasBenRaies-fr.pdf"
+                                    download
+                                    icon="download"
+                                    content="Download CV"
+                                    aria-label="Download CV (PDF)"
+                                />
+                            </div>
                         </Accordion.Content>
                     </Accordion>
                 </Segment>

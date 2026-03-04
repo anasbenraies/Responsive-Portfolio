@@ -18,13 +18,17 @@ const Profile: React.FC<Props> = ({ name }) => {
 
       <div className="profile-content">
         {/* Left side */}
+
         <div className="profile-card">
-          <VCard
-            name={name}
-            job="Full-Stack Engineer"
-            description="Specialized in backend engineering."
-          />
+          <Link to={"/"}>
+            <VCard
+              name={name}
+              job="Full-Stack Engineer"
+              description="Specialized in backend engineering."
+            />
+          </Link>
         </div>
+
 
         {/* Right side */}
         <div className="hcards-grid">
@@ -57,7 +61,7 @@ const Profile: React.FC<Props> = ({ name }) => {
             </div>
           </Link>
 
-          <Link to={"/skills"}>
+          <Link to={"/certifications"}>
             <div className="stylish-shadow">
               <HCard
                 header="Certifications and Awards"
@@ -71,10 +75,10 @@ const Profile: React.FC<Props> = ({ name }) => {
       </div>
       <br />
       {/* <Fade> */}
-        <div className="AboutMe">
-          <h2 className="questions">Some questions </h2>
-          <AccordionExampleInverted />
-        </div>
+      <div className="AboutMe">
+        <h2 className="questions">Some questions </h2>
+        <AccordionExampleInverted />
+      </div>
       {/* </Fade> */}
     </div>
   );

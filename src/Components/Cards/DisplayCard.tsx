@@ -18,7 +18,7 @@ const DisplayCard: React.FC<DisplayProps> = ({ ProjectTitle }) => {
   useEffect(() => {
     if (ProjectTitle === "Software Module Generator") {
       setDescription(
-        "You draw the workflow , AI writes the code , you got your running software Yeah, it's exactly what you think it is."
+        "You draw the workflow , AI writes the code , you got your running software . Yeah, it's exactly what you think it is."
       );
       setTechStack("React • Node/express • JWT • Supabase • AI");
       setGithubRepo("https://github.com/anasbenraies/Workflow-Application");

@@ -6,6 +6,7 @@ import Profile from './Pages/Profile/Profile';
 import Projects from './Pages/Projects/Projects';
 import Skills from './Pages/Skills/Skills';
 import Experience from './Pages/Experience/Experience';
+import Certifications from './Pages/Certifications/Certifications';
 
 const App = () => (
   <BrowserRouter>
@@ -15,6 +16,8 @@ const App = () => (
       <Route path="/projects" element={<Projects />} />
       <Route path="/skills" element={<Skills />} />
       <Route path="/Experience" element={<Experience />} />
+      <Route path="/certifications" element={<Certifications />} />
+
     </Routes>
   </BrowserRouter>
 );

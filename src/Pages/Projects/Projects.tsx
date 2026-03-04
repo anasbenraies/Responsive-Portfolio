@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Grid } from "semantic-ui-react";
 import DisplayCard from "../../Components/Cards/DisplayCard";
 import CardProj from "../../Components/Cards/CardProj";
@@ -8,6 +8,19 @@ const Projects: React.FC = () => {
   const [ProjectName, setProjectName] = useState(
     "Click on Projects to Visualize them"
   );
+  const displayRef = useRef<HTMLDivElement | null>(null);
+
+  const handleClick = (name: string) => {
+    setProjectName(name);
+    // Only scroll into view on small/mobile screens
+    // Use matchMedia so the behavior adapts if the user resizes the window
+    if (typeof window !== "undefined" && window.matchMedia) {
+      const isMobile = window.matchMedia("(max-width: 768px)").matches;
+      if (isMobile) {
+        displayRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+  };
 
   return (
     <div className="projects-page">
@@ -15,26 +28,28 @@ const Projects: React.FC = () => {
         <Grid.Row stretched>
           {/* Left side - Display */}
           <Grid.Column width={8} className="display-section">
-            <DisplayCard ProjectTitle={ProjectName} />
+            <div ref={displayRef}>
+              <DisplayCard ProjectTitle={ProjectName} />
+            </div>
           </Grid.Column>
 
           {/* Right side - List of Projects */}
           <Grid.Column width={8} className="projects-list">
-            <div onClick={() => setProjectName("Software Module Generator")}>
+            <div onClick={() => handleClick("Software Module Generator")}>
               <CardProj
                 title="Software Module Generator"
                 ProjectType="AI Powered Software"
                 TagArrays={["Automation", "AI", "FullStack"]}
               />
             </div>
-            <div onClick={() => setProjectName("Imonitor Backend")}>
+            <div onClick={() => handleClick("Imonitor Backend")}>
               <CardProj
                 title="Imonitor Backend"
                 ProjectType="Backend"
                 TagArrays={["IoT", "Spring Boot", "MQTT Broker"]}
               />
             </div>
-            <div onClick={() => setProjectName("This Portfolio")}>
+            <div onClick={() => handleClick("This Portfolio")}>
               <CardProj
                 title="This Portfolio"
                 ProjectType="FrontEnd"

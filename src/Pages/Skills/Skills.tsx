@@ -17,10 +17,11 @@ const Skills: FC<SkillsProps> = () => {
             body={[
               ["React", "Advanced/Expert"],
               ["NodeJs", "Advanced/Expert"],
-              ["Springboot", "Advanced/Expert"],
               ["ExpressJs", "Advanced/Expert"],
-              ["Hono.Js", "Advanced/Expert"],
+              ["NestJS", "Advanced/Expert"],
+              ["Springboot", "Advanced/Expert"],
               ["Python", "Not a library 😉 , still enjoy it"],
+              ["Django", "Advanced/Expert"],
               
             ]}
           />
@@ -40,7 +41,7 @@ const Skills: FC<SkillsProps> = () => {
           />
         </div>
 
-        <div className="skills-section">
+        {/* <div className="skills-section">
           <h3 className="skills-subtitle">Certifications</h3>
           <TableX
             Color="purple"
@@ -51,7 +52,7 @@ const Skills: FC<SkillsProps> = () => {
               ["Web Dev Bootcamp", "Completed"],
             ]}
           />
-        </div>
+        </div> */}
       </div>
     </div>
   );
