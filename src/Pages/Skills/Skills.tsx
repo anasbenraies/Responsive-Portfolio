@@ -1,10 +1,16 @@
-import type { FC } from "react";
+import { useEffect, type FC } from "react";
 import { SkillsTable as TableX } from "../../Components/SkillsTable";
 import "./Skills.css";
 
 interface SkillsProps {}
 
 const Skills: FC<SkillsProps> = () => {
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.scrollTo({ top: 0, behavior: "auto" });
+    }
+  }, []);
+
   return (
     <div className="skills-page">
       <h2 className="skills-title">My Skills</h2>

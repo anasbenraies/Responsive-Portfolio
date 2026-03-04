@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Grid } from "semantic-ui-react";
 import DisplayCard from "../../Components/Cards/DisplayCard";
 import CardProj from "../../Components/Cards/CardProj";
@@ -9,6 +9,12 @@ const Projects: React.FC = () => {
     "Click on Projects to Visualize them"
   );
   const displayRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.scrollTo({ top: 0, behavior: "auto" });
+    }
+  }, []);
 
   const handleClick = (name: string) => {
     setProjectName(name);
