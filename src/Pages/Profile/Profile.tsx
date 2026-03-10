@@ -37,7 +37,7 @@ const Profile: React.FC<Props> = ({ name }) => {
               <HCard
                 header="Projects"
                 meta="Results-oriented"
-                description="Efficient , Scalable , Creative"
+                description="Efficient , Creative "
               />
             </div>
           </Link>
@@ -46,7 +46,7 @@ const Profile: React.FC<Props> = ({ name }) => {
               <HCard
                 header="Experience"
                 meta="Implies depth and foundation."
-                description="Methodical , Strategic , Collaborative "
+                description="Methodical , Collaborative "
               />
             </div>
           </Link>
@@ -56,7 +56,7 @@ const Profile: React.FC<Props> = ({ name }) => {
               <HCard
                 header="Skills"
                 meta=" high-level knowledge"
-                description="Modern , Analytical , Proficient "
+                description="Modern , Analytical "
               />
             </div>
           </Link>
