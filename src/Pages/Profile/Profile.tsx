@@ -66,7 +66,7 @@ const Profile: React.FC<Props> = ({ name }) => {
               <HCard
                 header="Certifications and Awards"
                 meta="Variety"
-                description="Recognized , Verified."
+                description="Recognized , Verified "
               />
             </div>
           </Link>
